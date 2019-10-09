@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+//int -- cele cislo
+//char -- znak
+//bool -- pravdivostni hodnota
+//float -- desetinny
+//double -- vetsi float
+
+// if / else if / else
+
+int main()
+{
+    bool bonus = true; // bonus is 1.05%
+    char c = 'p'; // '' -> apostrof je znak
+                  // "" -> uvozovky jsou retezec
+    int  money = 20000;
+    float inc = 1.05;
+    /* 
+        Viceradokvy komentar
+    */
+    
+    if( bonus ){   // ! je negace !true == false
+                    // ! je negace !false == true
+        if(c != 'l'){// != nerovna se
+                     // == rovna se
+            money = money * inc;
+        }    
+        
+    }
+    
+    printf("%d \n", money);
+    
+    
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
