@@ -1,1 +1,92 @@
-Int -> celé číslo
+Datové typy
+int    -> celé číslo (integer)
+char   -> znak (1Byte) 
+float  -> desetinné číslo
+double -> desetinné číslo s větší přesností
+bool   -> pravdivostní hodnota (boolean - pravda/nepravda)
+
+Výraz
+x = 0
+
+Příkaz
+x = 0;
+
+Proměnná
+Pojmenovaný kus paměti. Bez něj bychom museli počítat s adresou, offsetem,... Takto nám stačí použít pouze jméno.
+
+Deklarace proměnné
+int x; 
+
+Definice proměnné
+int x = 0;    Proměnná x je typu celé číslo a vložili jsme do ní hodnotu 0
+
+Komentář
+Komentáře se při překladu vyhazují (nepřekládají se). Jedná se pouze o info pro programátora.
+// -> jednořádkový komentář
+/* více řádkový komentář */
+
+příklad.:
+// zakomentoval se pouze tento řádek
+/* zakomentoval jsem tento řádek
+   tento řádek
+   i tento řádek
+*/
+
+
+Podmíněný příkaz
+if      -> použijeme, pokud chceme, aby se podmínka vždy zkontrolovala; if musí předcházet else ifu i else-> musí být prostě první
+else if -> použijeme, pokud chceme, aby se podmínka zkontrolovala jen pokud předchozí if a else if nebyly splněné
+else    -> pokdu se ani if ani else if nesplní, provede se -> neobsahuje podmínkovou část
+
+Složený příkaz
+{} -> umožňuje u podmínek použít více jak 1 příkaz -> za složenými závorkami se středník nepíše, ale píše se za každým příkazem v něm
+
+příklad.:
+  if(podmínka)
+    tento příkaz, se provede po splnění podmínky ;
+  tento příkaz se provede i když není podmínka splněná ;
+  
+  if(podmínka)
+    tento příkaz, se provede po splnění podmínky ;
+    tento příkaz se provede i když není podmínka splněná ;
+  
+  if(podmínka){
+    tento příkaz, se provede po splnění podmínky ;
+    tento příkaz, se provede po splnění podmínky ;
+  }
+  
+Vnořené podmínky
+if(podmínka){ 
+  if(podmínka){ -> podmínka vnořená do podmínky na řádku 46, její podmínka se zkontroluje, jen pokud bude podmínka na řádku 46 splněna
+    if(podmínka){ -> podmínka vnořená do podmínky na řádku 47, její podmínka se zkontroluje, jen pokud bude podmínka na řádku 46 a
+                     zároveň na řádku 48 splněna
+    }
+  }
+}
+else if(podmínka){ -> na stejné úrovni, jako podmínka na řádku 46, ale podmínka se zkontroluje jen pokud se nesplňí podmínka na řádku 46
+}
+
+Formátování
+Cokoliv vnořeného se automaticky tabulátoruje (TAB), například:
+if(podmínka)
+  odtabulovaný příkaz;
+Podmínky,... na stejné úrovni jsou stejně odtabulátorované, například.:
+if(podmínka)
+  něco;
+if(podmínka)
+  něco;
+  
+Špatné formátovaní je například.:
+if(podmínka)
+  něco;
+  if(podmínka)
+    něco;
+    
+    nebo
+    
+if(podmínka)
+  něco;
+  if(podmínka)
+  něco;
+  
+    atd.
