@@ -98,13 +98,24 @@ Výpis na obrazovku
    funkce printf
    printf("text k vypsani typ_promenne_k_vypisu", promenna_k_vypisu);
  př.: printf("Promenna i ma hodnotu: %d\n", i);
-                                      ^
-                                      |
-                                      %d určuje typ proměnné = %d je celé číslo, %a je desetinné číslo (double)
+                                      ^ ^
+                                      | |____ odřádkuje, takže další print se vypíše na další řádek, jinak vedle sebe
+                                      | 
+                                      určuje typ proměnné = %d je celé číslo, %a je desetinné číslo (double)
                                                                %f je desetinné číslo (float), %c je znak, %s je
                                                                textový řetězec, %p je ukazatel, %x je hexadecimální
-                                                               číslo
- 
+                                                               číslo,...
+Pokud napíšu: printf("Promenna i ma hodnotu: \n"); , tak se proměnná nevypíše. Cokoliv je v "" se v této podobě vypíše.
+Abyste vypsali přípo proměnnou, musíte přidat typ proměnné (%d, %f,...) a za uvozovky napsat proměnnou k vypsání.
+printf("Promenna i ma hodnotu: %d\n", i);
+                                    ^^^^
+                                    ||||
+                                    toto vypíše proměnnou i, která se výpíše jako celé číslo (%d)
+Pokud chcete vypsat více proměnných, tak se typ přiřadí k následující proměnné, viz příklad níže.:
+printf("Hodnoty: %d %d %d\n", a, b, c);
+                  ^  ^  ^
+                  a  b  c
+                  
 return -> ukončuje program s hodnotou, kterou jste přiřadili (pokud tuto hodnotu neřešíte, například
             pokud nemáte více programů naráz, tak ji volte 1 = nastal problém, 0 = vše dopadlo dobře)
 př.: return 0;
