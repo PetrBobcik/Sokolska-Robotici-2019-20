@@ -125,7 +125,7 @@ př.: return 0;
 Ekvivalentné zápis
 i=i+1;  -> i+=1; -> i++; -> ++i;
 i=i-1;  -> i-=1; -> i--; -> --i;
-
+Pokud chcete přičíst/odečíst jinou hodnotu než 1, tak můžete použít první dvě varianty: i = i + 23; nebo i+=23;
 cyklus for
 for( vytvoření_proměnné; podmínková_část; co_se_provede){
    blok příkazů, které se mají při každém průchodu splnit
