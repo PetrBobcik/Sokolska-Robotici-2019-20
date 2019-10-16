@@ -13,6 +13,8 @@ x = 0;
 
 Proměnná
 Pojmenovaný kus paměti. Bez něj bychom museli počítat s adresou, offsetem,... Takto nám stačí použít pouze jméno.
+Datový_typ jméno_proměnné = hodnota; 
+
 
 Deklarace proměnné
 int x; 
