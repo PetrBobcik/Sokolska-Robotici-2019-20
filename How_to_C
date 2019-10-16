@@ -14,7 +14,8 @@ x = 0;
 Proměnná
 Pojmenovaný kus paměti. Bez něj bychom museli počítat s adresou, offsetem,... Takto nám stačí použít pouze jméno.
 Datový_typ jméno_proměnné = hodnota; 
-
+Př.: int promenna = 0;
+Pokud se proměnná používá, například v podmínce,... tak se k ní datový typ nenpíše. Datový typ se tam píše jen při vytváření.
 
 Deklarace proměnné
 int x; 
