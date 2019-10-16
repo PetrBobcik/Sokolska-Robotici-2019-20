@@ -42,8 +42,8 @@ else if -> použijeme, pokud chceme, aby se podmínka zkontrolovala jen pokud p�
 else    -> pokdu se ani if ani else if nesplní, provede se -> neobsahuje podmínkovou část
 
 Složený příkaz
-{} -> umožňuje u podmínek použít více jak 1 příkaz -> za složenými závorkami se středník nepíše, ale píše se za každým příkazem v něm
-
+{} -> umožňuje u podmínek použít více jak 1 příkaz -> za složenými závorkami se středník nepíše, ale píše se za každým příkazem v něm 
+ 
 příklad.:
   if(podmínka)
     tento příkaz, se provede po splnění podmínky ;
@@ -93,3 +93,34 @@ if(podmínka)
   něco;
   
     atd.
+
+Výpis na obrazovku
+   funkce printf
+   printf("text k vypsani typ_promenne_k_vypisu", promenna_k_vypisu);
+ př.: printf("Promenna i ma hodnotu: %d\n", i);
+                                      ^
+                                      |
+                                      %d určuje typ proměnné = %d je celé číslo, %a je desetinné číslo (double)
+                                                               %f je desetinné číslo (float), %c je znak, %s je
+                                                               textový řetězec, %p je ukazatel, %x je hexadecimální
+                                                               číslo
+ 
+return -> ukončuje program s hodnotou, kterou jste přiřadili (pokud tuto hodnotu neřešíte, například
+            pokud nemáte více programů naráz, tak ji volte 1 = nastal problém, 0 = vše dopadlo dobře)
+př.: return 0;
+
+
+16.10.2019
+Ekvivalentné zápis
+i=i+1;  -> i+=1; -> i++; -> ++i;
+i=i-1;  -> i-=1; -> i--; -> --i;
+
+cyklus for
+for( vytvoření_proměnné; podmínková_část; co_se_provede){
+   blok příkazů, které se mají při každém průchodu splnit
+}
+
+př.:
+for(int j = 10; j < 10;j+=2){
+   printf("Variable i: ");    
+}
