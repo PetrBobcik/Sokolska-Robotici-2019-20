@@ -1,4 +1,5 @@
 // vypis pouze sudych cisel
+// krome samotneho pole si zde zopakujete promenne, cyklus for i while a modulo (%)
 
 #include <stdlib.h>
 
@@ -20,5 +21,4 @@ int main(){
   }
   
   return 0;
-  
 }
