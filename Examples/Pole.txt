@@ -1,1 +1,21 @@
-aaa
+// vypis pouze sudych cisel
+
+#include <stdlib.h>
+
+int main(){
+  int suda[10];   // vytvoreni pole deseti prvku
+  int cntr = 0;   // pocitadlo sudych cisel
+  int num = 0;    // cislo, ktere se inkrementuje tak dlouho, dokud se nenajde 10 sudych cisel
+  
+  while(cntr < 10){  
+    if( (num % 2) == 0 ){ // sude cislo 
+      sude[cntr] = num;   // ulozi dane cislo do pole na pozici urcenou cntr
+      cntr++;
+    }
+    num++;    // posuneme se na dalsi cislo
+  }
+  
+  for(int i = 0; i < 10; i++){    // vypise vsechna cisla
+    printf("Sude cislo: %d\n", sude[i]);
+  }
+}
