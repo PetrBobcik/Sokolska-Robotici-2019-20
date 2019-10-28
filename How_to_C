@@ -121,7 +121,15 @@ return -> ukončuje program s hodnotou, kterou jste přiřadili (pokud tuto hodn
 př.: return 0;
 
 
-16.10.2019
+
+
+
+
+
+
+############################################################################################################
+                                                16.10.2019
+############################################################################################################
 Ekvivalentné zápis
 i=i+1;  -> i+=1; -> i++; -> ++i;
 i=i-1;  -> i-=1; -> i--; -> --i;
@@ -143,8 +151,14 @@ for(int j = 10; j < 10;j+=2){ // opakuj se, DOKUD je 'j' menší než 10
    printf("Variable i: ");    
 }
 
-23.10.2019
 
+
+
+
+
+############################################################################################################
+                                                23.10.2019
+############################################################################################################
 Cyklus while - pracuje se s ním stejně, jako s for cyklem, ale v kulatých závorkách se proměnná nevytváří
                a ani se zde neprovádí akce napr.: i++, ... tyto věci musí být mimo
 while(podmínka){
@@ -207,3 +221,5 @@ Jak přistupovat k prvkům pole:
    !!!!! Pole začíná na hodnotě 0, takže první prvek je na indexu 0 a poslední na 99, nikoli 100. !!!!!
    
 Zápis do prvku pole je stejný jako u proměnné: vek_zamestnance[0] = 25; -> na první prvek pole jsme zapsali číslo 25
+
+Přidal jsem složku examples, kde najdete některé ukázkové věci.
