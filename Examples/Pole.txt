@@ -18,4 +18,7 @@ int main(){
   for(int i = 0; i < 10; i++){    // vypise vsechna cisla
     printf("Sude cislo: %d\n", sude[i]);
   }
+  
+  return 0;
+  
 }
