@@ -142,3 +142,68 @@ př.:
 for(int j = 10; j < 10;j+=2){ // opakuj se, DOKUD je 'j' menší než 10
    printf("Variable i: ");    
 }
+
+23.10.2019
+
+Cyklus while - pracuje se s ním stejně, jako s for cyklem, ale v kulatých závorkách se proměnná nevytváří
+               a ani se zde neprovádí akce napr.: i++, ... tyto věci musí být mimo
+while(podmínka){
+   příkaz;
+   příkaz;
+   příkaz;
+   ...
+}
+
+příklad:
+int i = 0;     --> vytvoření proměnné
+while(i < 5){  --> podmínka
+   printf("Cislo je: %d\n", i);
+   i++;        --> akce
+}
+Tento cyklus vypise 5x text v printf().
+
+Cyklus do while - stejný jako while, akorát se nejprve provede obsah složených závorek a až poté se zkontroluje
+                  podmínka ve while
+                - rozdíl oproti while je v tom, že se obsah složených závorek provede vždy alespoň jednou, zatímco
+                  u while se nemusí provést ani jednou
+do{
+   příkaz;
+   příkaz;
+   příkaz;
+   ...
+}while(podmínka);
+
+Modulo - zbytek po celočíselném dělení
+Značí se - %
+Příklad.:  1 / 2 = 0, ale  1 % 2 = 1
+          -1 / 2 = 0, ale -1 % 2 = -1
+Umožňuje vám vymezit interval - chci interval od 0 do 10, ale nevím, jaké číslo mi zadá uživatel,
+                                tak provedeme - číslo_od_uživatele % 10   ->  1 % 10 je 1, 2 % 10 je 2,...
+                                10 % 10 je 0, 11 % 10 je 1 atd...
+Pomocí modulo můžeme zjistit, zda je danné číslo sudé / liché. Pokud modulo nějakého čísla dvojkou není 0, tak je liché,
+příkladem je například.: 1 % 2 = 1, takže liché, ale 2 % 2 = 0, takže sudé.
+
+Pole
+Zatím jsem pracovali pouze s jednou proměnnou, ale co kdybychom si chtěli vytvořit jednu proměnnou, která by obsahovala více
+hodnot naráz? Například pokud chcete uchovat věk 100 svých zaměstnanců, tak je přece hloupost vytváře 100 různých proměných 
+stylu 
+int zam1_vek;
+int zam2_vek;
+int zam3_vek;
+int zam4_vek;
+...
+Proto existuje konstrukce zvaná pole. Jedná se o "n" prvků, uloženy za sebou v paměti. Datové typy jsou stené jako 
+známe u proměnných (int, float, bool,...). 
+Jak pole vypadá:
+   datový_typ jméno_pole[ kolik_prvků_chceme ];
+   
+př.: int vek_zamestnance[100]; -> vytvořil jsem pole se 100 hodnotami a všechny typu celé číslo (int).
+                               -> pole je takzvaně homogenní, takže v sobě může obsahovat pouze prvky
+                                  stejného typu, takže nemůže být deset typu int, deset typu char, ...
+                                  
+Jak přistupovat k prvkům pole: 
+   printf("vek prvniho zamestnance: %d",vek_zamestnance[0]); --> vypise vek prvniho zamestnance
+     
+   !!!!! Pole začíná na hodnotě 0, takže první prvek je na indexu 0 a poslední na 99, nikoli 100. !!!!!
+   
+Zápis do prvku pole je stejný jako u proměnné: vek_zamestnance[0] = 25; -> na první prvek pole jsme zapsali číslo 25
