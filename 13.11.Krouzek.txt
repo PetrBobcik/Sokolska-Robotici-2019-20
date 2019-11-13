@@ -1,0 +1,72 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void player_prin_them_all( string *p, int num){
+    for( int i = 0; i < num; i++ ){
+        cout << p[i] << endl;
+    }
+}
+
+bool player_delete(string *p, string name, int num){
+    for( int i = 0; i < num; i++ ){   // Projede 4 prvky pole
+        if(p[i] == name){ // pokud hrac na pozici i == name 
+            p[i] = "";    // hrace smaz
+            return true;
+        }
+    }
+    return false;
+}
+
+int player_count(string *p){
+    int cntr = 0;
+    for(int i = 0; i < 100; i++){
+        if(p[i] != "")
+            cntr++;
+        else
+            break;
+    }
+    
+    return cntr; 
+}
+
+void player_add(string *p, string name);    // prototyp
+void player_add(string *p, string name){    // prototyp + telo
+    int i = 0;
+    while(i < player_count(p)){
+        if(p[i] == ""){
+            p[i] = name;
+            break;
+        }
+        i++;
+    }
+}
+
+int main()
+{
+    string player[100];
+    player[0] = "Franta";
+    player[1] = "Player1297";
+    player[2] = "Killer";
+    player[3] = "Kid";
+    
+    player_prin_them_all(player, player_count(player));
+    printf("hrac nalezen a smazan: %d\n", player_delete(player,"Franta", 4));
+    player_prin_them_all(player, player_count(player));
+    player_add(player, "King");
+    player_add(player, "King1");
+    player_add(player, "King2");
+    player_prin_them_all(player, player_count(player));
+    return 0;
+}
+
+
