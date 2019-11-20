@@ -1,0 +1,83 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int jmeno = 0;
+/*datovy_typ jmeno( seznam_parametru, ... ){}*/
+
+// print_name(pole, "Petr", 0);
+void print_name( string *p , string name , int op ){
+    switch(op){
+        case 0: // delete
+            for(int i = 0; i < 4; i++){
+                if(p[i] == name){
+                    p[i] = "EMPTY";
+                    break;
+                }
+            }
+            break;
+            
+        case 1: // insert
+            for(int i = 0; i < 4; i++){
+                if(p[i] == "EMPTY"){
+                    p[i] = name;
+                    break;
+                }
+                
+            }
+            break;
+        case 2: // hallo
+            for(int i = 0; i < 4; i++){
+                if(p[i] == name){
+                    for(int j = 0; j < name.length(); j++){ //.length() 
+                                                            // vrati delk
+                                                            // retezce 
+                        cout << p[i][j] << ".";
+                    }
+                    break;
+                }
+                
+            }
+            break;
+    }
+}
+
+
+
+
+int main()
+{
+    string pole[4];
+    pole[0] = "Petr";
+    pole[1] = "Martin";
+    pole[2] = "Tom";
+    pole[3] = "Jirka";
+
+    
+    for(int i = 0; i < 4; i++){
+        cout << pole[i] << endl;
+    }
+    
+    print_name(pole, "Petr", 0);
+    
+    for(int i = 0; i < 4; i++){
+        cout << pole[i] << endl;
+    }
+    
+    print_name(pole, "Petr", 1);
+    
+    for(int i = 0; i < 4; i++){
+        cout << pole[i] << endl;
+    }
+    print_name(pole, "Petr", 2);
+    return 0;
+}
