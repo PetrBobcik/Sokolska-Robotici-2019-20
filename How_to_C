@@ -223,3 +223,130 @@ Jak přistupovat k prvkům pole:
 Zápis do prvku pole je stejný jako u proměnné: vek_zamestnance[0] = 25; -> na první prvek pole jsme zapsali číslo 25
 
 Přidal jsem složku examples, kde najdete některé ukázkové věci.
+
+
+
+
+
+
+############################################################################################################
+                                                30.10.2019 - 13.11.2019
+############################################################################################################
+
+Funkce
+
+Tvoří se podobně jako proměnne:
+Datový_typ název(){
+   tělo_funkce v podobě příkazů, vyklů, jiných funkcí,...
+}
+Pojmy: pokud místo složených závorek "{}" napíšeme středník ";" -> int funkce();, tak se jedná od tzv. prototyp (deklarace), čili 
+překladač už ví, že existuje funkce s tímto jménem a parametry atd.., ale nezná její vnitřek. Díky tomu můžeme napsat nad main 
+prototypy a samotné definice pojmů pod main. Tím může, ale nemusí být kód přehlednější.
+   Oproti proměnným nám tu přibyl datový typ void, který není žádným hmatatelným typem, jako znak, číslo,... Používá se u funkcí
+jejichž výsledek nás nezajímá, či-li funkce nevrací žádnou hodnotu.: void print_date(); kde funkce v sobě zajistí výpiš, ale
+nic nevrací. Pokud má funkce něco vracet, dá se jí jiný datový typ než void (int, bool, double, float, ...) a uvnitř funkce 
+se použije klíčové slovo "return" a za ní co se má vrátit ( například return 0, což znáte to ze samotné funkce int main(), do
+které si píšete program).
+   Funkce může obsahovat i parametry. Jedná se o hodnoty, které funkci předáme k dalšímu zpracování. Například pokud chceme sečíst
+dvě celá čísla: int add(int cisloA, int cisloB){
+                  return cisloA + cisloB; // secte cisloA s cislemB a výsledná hodnota se vrátí
+                }
+Pro lepší pochopení si můžete představit, že hodnota, kterou funkce vrací se po vrácení dosadí místo funkce, například pro
+výše vytvořenou funkci add();:
+   int x = add(5,6); add(5,6) vrací 11, tak si můžete představit, že se nahradí takto: int x = 11;, čili, pod samotnou
+   funkcí se skrývá hodnota.
+Na pořadí parametru při vytváření funkce nesejde, ale tak jak si to nadefinujete, tak v tomto pořadí je musíte používat.
+
+  
+Switch
+
+Představte si, že se uživatele zeptáte, jaké chce číslo od 0 do 10. Jakmile číslo dostanete, musíte se ptát:
+Špatná varianta
+   if(cislo == 0){
+      udelej_neco;
+   }
+   if(cislo == 1){
+      udelej_neco;
+   }
+   if(cislo == 2){
+      udelej_neco;
+   }
+   ...
+Lepší varianta
+   if(cislo == 0){
+      udelej_neco;
+   }
+   else if(cislo == 1){
+      udelej_neco;
+   }
+   else if(cislo == 2){
+      udelej_neco;
+   }
+   ...
+Budete pod sebou mít 11 podmínek, ale vše se týká jednoto a téhož čísla. V tento okamžik přichází na řadu "switch", pro
+Pythonisty je v Pythonu "case". Vytvoření je velmi jednoduché:
+
+switch( proměnná_kvůli_které_switch_děláme ){
+   case hodnota1: 
+      udelej_neco;
+      break;
+      
+   case hodnota2:
+      udelej_neco;
+      break;
+      
+   case hodnota3:
+      udelej_neco;
+      break;
+   default:
+      break;
+}
+
+V "case" je uvedena hodnota "proměnná_kvůli_které_switch_děláme", takže pokud to vztáhnem na předchozí příklad s čísly,
+dostaneme toto:
+   switch( cislo){
+      case 0: 
+         printf("číslo je nula\n");
+         případně_další_kód;
+         break;
+
+      case 1:
+         printf("číslo je jedna\n");
+         případně_další_kód;
+         break;
+
+      case 2:
+         printf("číslo je dva\n");
+         případně_další_kód;
+         break;
+      ...
+   }
+   
+   Kód je teď čitelnější a je vidět, že všechny "case" se vztahují k jednomu číslu. Pokud nepoužijete klíčové slovo "break",
+tak se bude provádět další "case", dokud se nenarazí na "break". Či-li pokud bych z case 0 odstranil break a uživatelovo
+číslo bude 0, tak se provede celý case 0 a následně se provede i celý obsah case 1, kde se narazí na break a case se ukončí.
+Této vlastnosti se říká protékání. Tato vlastnost se dá využít v případě, kdy víte, že číslo 0,1,2 bude mít ten samý kód,
+tak napíšete:
+   case 0:
+   case 1:
+   case 2:
+      kód;
+      break;
+      
+Možná jste si povšimli, že jsem nezmínil výše použité klíčové slovo "default". Nedává se za něj číslo a říká nám to, že pokud
+se neshodoval žádný case, tak se provede vnitřek "default". U "default" nezáleží, jestli ho do "switch" dáte na záčátek, konec,...
+protože zkusí nejprve najít nějakou shodu s "case", takže pokud jste hod dali před všechny "case", tak to má stejný výsledek,
+jako by byl úplně na konci.
+
+            
+|\      /--\   ______   |   |\      |   /-----   /--\      |  |  |
+| \    /    \       /   |   | \     |  |        /    \     |  |  |
+| /    |    |      /    |   |  \    |  |        |    |     |  |  |
+| \    |    |     /     |   |   \   |  |  ____  |    |     |  |  |
+|  \   |____|    /      |   |    \  |  |     |  |____|     |  |  |
+| /    |    |   /       |   |     \ |  |     |  |    |   
+|/     |    |  /_____   |   |      \|  \_____/  |    |     O  O  O
+
+
+
+
