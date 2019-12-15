@@ -1,0 +1,25 @@
+1. Výpis čísel, které zadá uživatel. Zadá 5 a 10, tak program vypíše přehledně 5,6,7,8,9 i 10. (všetně hodnot, které zadal).
+2. Získat číslo/znak od uživatele a pomocí Switch konstrukce pro jednotlivé znaky provést akci: pokud uživatel zadá například znak 's',
+   tak vypíše třeba "Bylo zadáno s..." nebo tak něco.
+3. Udělat pole celočíselných hodnot a postupně je vypsat od prvního prvku po poslední a poté od posledního k prvnímu.
+4. Zkusit udělat jednoduchou kalkulačku se 2 operandy (hodnotamy) a 1 operátorem. Nápověda: operátor je možné detekovat ve switch.
+5. Vytvořit pole hodnot a vypsat nejprve zvlášť sudá a poté zvlášť lichá čísla, následně vypsat součet všech hodnot v poli.
+6. Načíst od uživatele n desetinných čísel (počet si určete pevně například na 5, nechci po vás tvorbu dynamického pole, které jsme 
+   nedělali) a vytvořte si proměnnou, kterou pojmenujete třeba threshold (bude se používat jako mezní hodnota). Cílem bude vypsat, kolik
+   bylo kladných čísel, kolik bylo záporných čísel a vypsat hodnoty větší než threshold proměnná.
+   
+Více na přemýšlení
+Pro příklad 7. a 8. používejte k výpisu hvězd buď funkci printf( co_chcete_vypsat ); v případě C nebo cout << co_chcete_vypsat; pro C++. 
+7. Vykresli plný čtverec z hvězd (pomocí cyklů), podle hodnot co zadá uživatel. Například uživatel zadá 4 -> *  *  *  * 
+                                                                                                             *  *  *  *
+                                                                                                             *  *  *  *
+                                                                                                             *  *  *  * 
+                                                                                                   mezi hvězdami jsou 3 mezery
+8. Vykreslit plný trojúhelník (pomocí cyklů) viz obrázek:
+*
+* *
+* * *
+* * * *
+* * *
+* *
+*
