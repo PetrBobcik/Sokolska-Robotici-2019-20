@@ -338,6 +338,20 @@ se neshodoval žádný case, tak se provede vnitřek "default". U "default" nez�
 protože zkusí nejprve najít nějakou shodu s "case", takže pokud jste hod dali před všechny "case", tak to má stejný výsledek,
 jako by byl úplně na konci.
 
+
+
+
+
+
+
+
+############################################################################################################
+                                                11.12.2019
+############################################################################################################
+
+DOMACÍ ÚKOL: viz Home_works soubor. 
+
+
             
 |\      /--\   ______   |   |\      |   /-----   /--\      |  |  |
 | \    /    \       /   |   | \     |  |        /    \     |  |  |
